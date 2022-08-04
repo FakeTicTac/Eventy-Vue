@@ -1,4 +1,4 @@
-# Eventy - The Application For Searching And Creating Events.
+# Eventy - The Application For Searching And Creating Events. (Client-Side)
 
 **Name:** Roman Makejev  
 **Uni-ID:** romake  
