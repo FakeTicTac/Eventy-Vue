@@ -3,8 +3,6 @@ import { createPinia } from 'pinia'
 
 
 import App from "./App.vue";
-
-import axios from 'axios'
 import router from './router'
 
 
@@ -15,7 +13,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 
-createApp(App)
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+
+
+// Create Application With Neccessary Extensions.
+const app = createApp(App)
     .use(router)
     .use(createPinia())
-    .mount("#app");
+
+
+// Register Globally Used Components.
+app.component("Header", Header)
+app.component("Footer", Footer)
+
+
+// Mount Application.
+app.mount("#app");

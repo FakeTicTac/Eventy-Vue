@@ -1,5 +1,6 @@
 
 <template>
+
   <div class="row">
     <div class="col-md-12 text-center">
       <h1>Login to Your Account</h1>
@@ -46,12 +47,14 @@
       </div>
     </div>
   </div>
+
 </template>
 
 
 <script lang="ts">
+import Header from "../../components/Header.vue";
 
-  export default {};
+  export default { components: { Header } };
 
 </script>
 
