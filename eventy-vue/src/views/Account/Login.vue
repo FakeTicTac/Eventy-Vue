@@ -1,6 +1,8 @@
 
 <template>
 
+  <div class="wrapper">
+
   <div class="row">
     <div class="col-md-12 text-center">
       <h1>Login to Your Account</h1>
@@ -8,18 +10,22 @@
       published every day
       </p>
     </div>
-    <div class="row text-center">
-      <div class="col-md-5 col-sd-12 text-md-end text-sm-center">
-        <input type="text">
-      </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-5 col-sd-12 text-md-end text-sm-center">
+      <input type="text">
+    </div>
       <div class="col-md-2 col-sd-12">
         
       </div>
       <div class="col-md-5 col-sd-12 text-md-start text-sm-center">
         <input type="text">
       </div>
-    </div>
-        <div class="row text-center mt-2">
+  </div>
+
+
+  <div class="row text-center mt-2">
       <div class="col-md-5 text-end">
         <input type="text">
       </div>
@@ -29,7 +35,8 @@
       <div class="col-md-5 text-start">
         <input type="text">
       </div>
-    </div>
+  </div>
+  
         <div class="row text-center mt-2">
       <div class="col-md-5 text-end">
         <input type="text">
