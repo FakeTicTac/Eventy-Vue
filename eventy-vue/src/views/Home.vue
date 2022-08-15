@@ -1,18 +1,14 @@
 
 <template>
 
-  <div class="row text-center mt-5 mb-5">
-    <div class="column-md-12">
-      <div class="input-group">
-          <input type="text" class="form-control" />
-          <div class="input-group-btn">
-            <button type="submit" class="btn">Search</button>
-          </div>
-        </div>
-    </div>
-  </div>
 
-  <div class="row text-center">
+
+
+
+
+
+
+  <div class="row text-center" style="background-color: #161616; color: #FFFFFF">
     <div class="col-md-3 my-auto">
       <img src="https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?w=2000" alt="Italian Trulli" class="img-fluid">
     </div>
@@ -26,7 +22,7 @@
 
   </div>
 
-    <div class="row text-center">
+    <div class="row text-center" style="background-color: #161616; color: #FFFFFF">
     <div class="col-md-3 my-auto">
       <img src="https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?w=2000" alt="Italian Trulli" class="img-fluid">
     </div>
@@ -40,7 +36,7 @@
 
   </div>
 
-    <div class="row text-center">
+    <div class="row text-center" style="background-color: #161616; color: #FFFFFF">
     <div class="col-md-3 my-auto">
       <img src="https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?w=2000" alt="Italian Trulli" class="img-fluid">
     </div>
@@ -54,7 +50,7 @@
 
   </div>
 
-    <div class="row text-center">
+    <div class="row text-center" style="background-color: #161616; color: #FFFFFF">
     <div class="col-md-3 my-auto">
       <img src="https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?w=2000" alt="Italian Trulli" class="img-fluid">
     </div>

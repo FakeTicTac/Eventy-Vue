@@ -1,20 +1,18 @@
 
 <template>
 
-  <div class="container-fluid d-flex flex-column min-vh-100">
-    <header>
-      <Header/>
-    </header>
+  <Header />
+
 
     <!-- Main Content Of Page. -->
-    <div class="container-fluid flex-fill d-flex align-items-center">
-      <router-view />
-    </div>
+    <!--<router-view />-->
 
-    <footer class="mt-auto">
+    <!--<footer class="mt-auto">
       <Footer/>
-    </footer>
-  </div>
+    </footer>-->
+
+
+
 </template>
 
 

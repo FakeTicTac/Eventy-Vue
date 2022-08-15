@@ -1,6 +1,6 @@
 
 <template>
-  <div class="row text-center">
+  <div class="row text-center" style="background-color: #161616; color: #FFFFFF ">
     <div class="col-md-4">
       <h6>Privacy Policy</h6>
     </div>
