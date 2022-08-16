@@ -4,6 +4,7 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "composite": true,
-    "types": ["node"]
+    "types": ["node"],
+    "typeRoots": [ "../node_modules/@types" ]
   }
 }

@@ -2,14 +2,14 @@
 <template>
 
   <Header />
-
+  <Sidebar />
 
     <!-- Main Content Of Page. -->
-    <!--<router-view />-->
+    <router-view />
 
-    <!--<footer class="mt-auto">
+    <footer class="mt-auto">
       <Footer/>
-    </footer>-->
+    </footer>
 
 
 
@@ -18,7 +18,9 @@
 
 <script lang="ts">
 
-  export default {};
+  import Sidebar from "./components/Sidebar.vue";
+
+  export default { components: { Sidebar } };
 
 </script>
 
