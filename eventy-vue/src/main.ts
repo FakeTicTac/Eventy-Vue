@@ -5,6 +5,9 @@ import {
     faSearch,
     faBars,
     faLocationPin,
+    faHome,
+    faRandom,
+    faAtlas
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -17,6 +20,7 @@ import router from './router'
 import 'jquery';
 import 'popper.js';
 import 'bootstrap';
+import "./assets/css/variables.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -29,6 +33,9 @@ library.add(
     faSearch,
     faBars,
     faLocationPin,
+    faHome,
+    faRandom,
+    faAtlas,
     );
 
 // Create Application With Neccessary Extensions.

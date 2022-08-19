@@ -4,7 +4,7 @@
   <div class="header">
 
     <div class="header_left">
-      <fa icon="bars" class="header_icon expand-menu-icon" />
+      <fa v-on:click="showMenu()" icon="bars" class="header_icon expand-menu-icon" />
       <span class="logo">Evently.</span>
     </div>
 
@@ -15,7 +15,7 @@
 
     <div class="header_right">
       <fa v-on:click="pressed()" icon="search" class="header_icon search-icon search-icon-sm" />
-      <button data-attr="Log In" class="log-in-button" ></button>
+      <button v-on:click="$router.push({ name: 'login' })" data-attr="Log In" class="log-in-button" ></button>
     </div>
 
   </div>
@@ -27,20 +27,27 @@
 
   export default {
     
+      data() {
+        return {
+          item: false,
+        }
+
+      },
+
       methods : {
 
-        pressed() {
-          if(window.innerHeight <= 767) {
-      
-          }
+        showMenu() {
+          
         }
       }
   };
-
+ 
 </script>
 
 
 <style scoped>
+
+  @import "@/assets/css/variables.css";
 
   .header {
     display: flex;
@@ -49,8 +56,11 @@
     height: 60px;
     padding: 25px;
     background-color: #161616;
-    color: #FFFFFF;
+    color: var(--gradient);
     border-bottom: 1px solid #525252;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .header_left {

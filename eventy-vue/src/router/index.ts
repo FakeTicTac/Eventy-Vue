@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 // Import Of Route Components.
 import Home from "@/views/Home.vue"
 
-import Login from "@/views/Account/Login.vue";
-import Signup from "@/views/Account/Signup.vue";
+import Login from "@/views/account/Login.vue";
+import Signup from "@/views/account/Signup.vue";
 
 import MyEvents from "@/views/event/MyEvents.vue";
 import EventOverview from "@/views/event/EventOverview.vue";

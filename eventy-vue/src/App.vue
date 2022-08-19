@@ -1,25 +1,18 @@
 
 <template>
 
-  <Header/>
-
-    <!-- Main Content Of Page. -->
-    <!--<router-view />-->
-
-    <!--<footer class="mt-auto">
-      <Footer/>
-    </footer>-->
-
-
+<div class="container-fluid">
+  <router-view />
+</div>
 
 </template>
 
 
 <script lang="ts">
 
-  import Sidebar from "./components/Sidebar.vue";
-
-  export default { components: { Sidebar } };
+  export default { 
+    
+  };
 
 </script>
 
