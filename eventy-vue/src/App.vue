@@ -1,15 +1,14 @@
 
 <template>
 
-  <Header />
-  <Sidebar />
+  <Header/>
 
     <!-- Main Content Of Page. -->
-    <router-view />
+    <!--<router-view />-->
 
-    <footer class="mt-auto">
+    <!--<footer class="mt-auto">
       <Footer/>
-    </footer>
+    </footer>-->
 
 
 

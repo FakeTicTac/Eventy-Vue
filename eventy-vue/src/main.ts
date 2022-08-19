@@ -4,6 +4,7 @@ import { createPinia } from 'pinia';
 import { 
     faSearch,
     faBars,
+    faLocationPin,
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -27,6 +28,7 @@ import Footer from "./components/Footer.vue";
 library.add(
     faSearch,
     faBars,
+    faLocationPin,
     );
 
 // Create Application With Neccessary Extensions.

@@ -3,18 +3,19 @@
 
   <div class="header">
 
-    <div class="header__menu">
-      <fa icon="bars" class="header__icons" />
-      <h2 style="color: white; margin-left: 20px;">Evently.</h2>
+    <div class="header_left">
+      <fa icon="bars" class="header_icon expand-menu-icon" />
+      <span class="logo">Evently.</span>
     </div>
 
-    <div class="header__input">
-      <input class="hidden-mobile" placeholder="Search for anything" type="text" />
-      <fa icon="search" class="header__icons" />
+    <div class="header_input">
+      <input placeholder="Search for events" type="text" />
+      <fa v-on:click="pressed()" icon="search" class="header_icon search-icon" />
     </div>
 
-    <div class="header__account">
-      <button class="header__login-button" >Log In</button>
+    <div class="header_right">
+      <fa v-on:click="pressed()" icon="search" class="header_icon search-icon search-icon-sm" />
+      <button data-attr="Log In" class="log-in-button" ></button>
     </div>
 
   </div>
@@ -26,6 +27,14 @@
 
   export default {
     
+      methods : {
+
+        pressed() {
+          if(window.innerHeight <= 767) {
+      
+          }
+        }
+      }
   };
 
 </script>
@@ -37,72 +46,178 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    height: 60px;
+    padding: 25px;
     background-color: #161616;
-    height: 56px;
-    
-  }
-
-  .header__menu {
-    display: flex;
-    align-items: center;
-  }
-
-  .header__input {
-    display: flex;
-    align-items: center;
-    width: 40%;
-
-  }
-
-  .header__account {
-    display: flex;
-    align-items: center;
-  }
-
-  .header__icons {
     color: #FFFFFF;
-    font-size: 1.5em;
+    border-bottom: 1px solid #525252;
   }
 
-  .header__input > input {
+  .header_left {
+    display: flex;
+    align-items: center;
+  }
+
+  .header_icon  {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .logo {
+    user-select: none;
+    font-size: 1.3em;
+    font-weight: 440;
+    margin-left: 1.3em;
+    letter-spacing: 0.09em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+  .header_input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2.1em;
+    width: 40%;
+  }
+
+  .header_input > input {
     flex: 1;
+    height: 2.1em;
+    border: 1.5px solid  transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(#161616, #161616), linear-gradient(to right, #F9984D 15%, #F32C31, #983C95);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #FFFFFF;
+  }
+
+  .header_input > input::placeholder {
+    color: #FFFFFF;
+    padding-left: 10px;
+  }
+
+  .header_input > input::before {
+    flex: 1;
+    content: "";
+    height: 2.1em;
+    position: absolute;
+    top: 1.5px;
+    bottom: 1.5px;
+    right: 1.5px;
+    left: 1.5px;
+    border-radius: 6px;
+    background-color: #161616;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   @media (max-width: 767px) {
-  .hidden-mobile {
-    display: none;
-  
-      }
+    .header_input {
+      display: none;
+    }
   }
 
-  .header__login-button {
-    display: inline-block;
+  .search-icon {
+    height: 1.1em;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .search-icon-sm {
+      height: 1.1em;
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .search-icon-sm {
+      display: none;
+    }
+  }
+
+  .header_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .log-in-button {
+    position: relative;
     height: 2.1rem;
     width: 7rem;
     border: none;
     outline: none;
-    position: relative;
     border-radius: 6px;
     background: linear-gradient(to right, #F9984D 15%, #F32C31, #983C95);
     cursor: pointer;
   }
 
-  .header__login-button::before {
-    content: "Log In";
-    top: 1px;
-    bottom: 1px;
-    right: 1px;
-    left: 1px;
+  
+  .log-in-button:hover {
+    position: relative;
+    height: 2.1rem;
+    width: 7rem;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background: linear-gradient(to right, #F9984D 15%, #F32C31, #983C95);
+    cursor: pointer;
+  }
+
+  .log-in-button::before {
     position: absolute;
+    top: 1.5px;
+    bottom: 1.5px;
+    right: 1.5px;
+    left: 1.5px;
     border-radius: 6px;
     background-color: #161616;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: 600;
-    color: white;
+    content: "";
+  }
 
+  .log-in-button:hover::before {
+    position: absolute;
+    top: 1.5px;
+    bottom: 1.5px;
+    right: 1.5px;
+    left: 1.5px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #F9984D 15%, #F32C31, #983C95);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    content: "";
+  }
 
+  .log-in-button::after {
+    position: absolute;
+    height: 2.1rem;
+    width: 7rem;
+    font-size: 1.2em;
+    font-weight: 700;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-image: linear-gradient(to right, #F9984D 15%, #F32C31, #983C95);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    content: attr(data-attr);
+  }
+
+  .log-in-button:hover::after {
+    position: absolute;
+    height: 2.1rem;
+    width: 7rem;
+    font-size: 1.2em;
+    font-weight: 700;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #161616;
+    content: attr(data-attr);
   }
 
 </style>
