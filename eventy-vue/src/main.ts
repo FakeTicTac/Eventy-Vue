@@ -7,7 +7,7 @@ import {
     faLocationPin,
     faHome,
     faRandom,
-    faAtlas
+    faArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -35,7 +35,7 @@ library.add(
     faLocationPin,
     faHome,
     faRandom,
-    faAtlas,
+    faArrowLeft,
     );
 
 // Create Application With Neccessary Extensions.
