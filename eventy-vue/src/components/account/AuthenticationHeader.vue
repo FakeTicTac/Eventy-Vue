@@ -32,7 +32,7 @@
     justify-content: space-between;
     height: 60px;
     padding: 25px;
-    background-color: var(--primary);
+    background-color: var(--background-primary);
 }
 
 .header_back {
@@ -41,7 +41,7 @@
 
 .header_icon {
     font-size: 2em;
-    color: var(--secondary);
+    color: var(--text-primary);
     cursor: pointer;
 }
 

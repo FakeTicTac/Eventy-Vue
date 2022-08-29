@@ -22,9 +22,15 @@
           </div>
         </div>
         <div class="item right">
-          <p>AAA2</p>
-          <p>BBB2</p>
-          <p>CCC2</p>
+          <div class="social-media-link">
+
+          </div>
+          <div class="social-media-link">
+
+          </div>
+          <div class="social-media-link">
+
+          </div>
         </div>
       </div>
     </div>
@@ -49,7 +55,7 @@ import AuthenticationHeader from "../../components/account/AuthenticationHeader.
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--primary);
+    background: var(--background-primary);
   }
 
   .main {
@@ -62,7 +68,7 @@ import AuthenticationHeader from "../../components/account/AuthenticationHeader.
     flex-direction: column;
     text-align: center;
     margin-top: 4.5rem;
-    color: var(--secondary);
+    color: var(--text-primary);
   }
 
   .login__description-action {
@@ -129,8 +135,8 @@ import AuthenticationHeader from "../../components/account/AuthenticationHeader.
     height: 3.5rem;
     width: 100%;
     border-radius: 6px;
-    background: var(--gradient);
-    color: var(--secondary);
+    background: var(--base-gradient);
+    color: var(--text-primary);
     padding-left: 1.2rem;
     text-align: left;
     font-weight: 500;
@@ -138,6 +144,15 @@ import AuthenticationHeader from "../../components/account/AuthenticationHeader.
     letter-spacing: 0.04em;
     opacity: 90%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .social-media-link {
+    margin-top: 1.7em;
+    height: 3.5rem;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid red;
+    background-color: none;
   }
 
   @media only screen and (max-width: 768px) {
@@ -156,6 +171,7 @@ import AuthenticationHeader from "../../components/account/AuthenticationHeader.
       display: flex;
       flex-direction: column;
     }
+
   }
 
 </style>

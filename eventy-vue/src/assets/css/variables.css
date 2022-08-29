@@ -1,6 +1,13 @@
 
 :root {
-    --primary: #161616;
-    --secondary: #FFFFFF;
-    --gradient: linear-gradient(to right, #F9984D 5%, #F32C31 30%, #983C95);
+    --background-primary: #161616;
+    --background-secondary: #303030;
+    --text-primary: #FFFFFF;
+    --text-secondary: #7C7C7C;
+    --base-gradient: linear-gradient(to right, #F9984D 5%, #F32C31 30%, #983C95);
+    
+    --base-font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --base-letter-spacing: 0.06em;
+
+    --base-font-size: 16px;
 }
