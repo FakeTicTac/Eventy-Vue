@@ -32,6 +32,7 @@
     justify-content: space-between;
     height: 60px;
     padding: 25px;
+    font-family: Open Sans;
     background-color: var(--background-primary);
 }
 
