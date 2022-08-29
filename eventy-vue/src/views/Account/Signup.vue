@@ -1,39 +1,32 @@
 
 <template>
 
-  <div class="login__container">
+  <div class="page__container">
+
     <AuthenticationHeader />
 
-    <div class="main">
+    <div class="signup__container">
 
-      <div class="login__description">
-        <h1 class="login__description-action">Log in to Your Account</h1>
-        <p class="login__description-promotion">Choose from 130,000 events with new additions<br>published every day</p>
+      <div class="signup__description-block">
+        <h1 class="description-block__action">Sign up For Evently</h1>
+        <p class="description-block__promotion">Choose from 130,000 events with new additions<br>published every day</p>
       </div>
 
-      <div class="collection">
-        <div class="item left">
-          <div class="login__input-field">
-            <input class="input-field" type="text" placeholder="Username / Email" />
-            <input class="input-field" type="text" placeholder="Password" />
-          </div>
-          <div class="login__submit">
-            <button>Log in to Your Account</button>
-          </div>
+      <div class="input__container">
+        <div class="input__fields">
+          <input class="field" type="text" />
+          <input class="field" type="text" />
+          <button>Create Your Account</button>
         </div>
-        <div class="item right">
-          <div class="social-media-link">
-
-          </div>
-          <div class="social-media-link">
-
-          </div>
-          <div class="social-media-link">
-
-          </div>
+        <div class="social__signup">
+          <button>Sign up with Google</button>
+          <button>Sign up with Facebook</button>
+          <button>Sign up with Apple Account</button>
         </div>
       </div>
+
     </div>
+
     <Footer />
 
   </div>
@@ -42,7 +35,7 @@
 
 
 <script lang="ts">
-import AuthenticationHeader from "../../components/account/AuthenticationHeader.vue";
+  import AuthenticationHeader from "../../components/account/AuthenticationHeader.vue";
 
   export default { components: { AuthenticationHeader } };
 
@@ -51,127 +44,77 @@ import AuthenticationHeader from "../../components/account/AuthenticationHeader.
 
 <style scoped>
 
-  .login__container {
+  .page__container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     background: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--base-font-family);
   }
 
-  .main {
+  .signup__container {
     flex: 1 1 auto;
   }
 
-  .login__description {
+  .signup__description-block {
     display:flex;
-    margin: 0 2em 0 2em;
     flex-direction: column;
-    text-align: center;
     margin-top: 4.5rem;
+    text-align: center;
     color: var(--text-primary);
   }
 
-  .login__description-action {
-    font-size: 35px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  .description-block__action {
+    margin-top: 1.1rem;
+    font-size: 36px;
+    letter-spacing: 0.11rem;
   }
 
-  .login__description-promotion {
-    margin-top: 1.7rem;
-    font-size: 16px;
-    font-weight: 550;
-    letter-spacing: 0.04em;
-    color: #727272;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  .description-block__promotion {
+    margin-top: 0.6rem;
+    font-size: 19px;
+    color: var(--text-tertiary);
   }
 
-  .collection {
+  .input__container {
     display: flex;
     flex-direction: row;
   }
 
-  .left {
+  .input__fields {
     display: flex;
     flex-direction: column;
   }
 
-  .item {
-    display: flex;
-    width: 30%;
-    flex-direction: column;
-    color: #FFFFFF;
-    width: 100%;
-  }
-
-.login__input-field {
-    display: flex;
-    flex-direction: column;
-    margin: 1em 2em 0 2em;
-  }
-
-  input::placeholder {
-    color: #A0A0A0;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    padding-left: 1.2rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  .input-field {
-    margin-top: 0.7em;
-    height: 3.5rem;
-    border-radius: 6px;
-    border: none;
-    background-color: #303030;
-  }
-
-  .login__submit {
-    margin: 3.1em 2em 0 2em;
-  }
-
-  .login__submit > button {
-    height: 3.5rem;
-    width: 100%;
-    border-radius: 6px;
-    background: var(--base-gradient);
-    color: var(--text-primary);
-    padding-left: 1.2rem;
-    text-align: left;
-    font-weight: 500;
-    font-size: 17px;
-    letter-spacing: 0.04em;
-    opacity: 90%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  .social-media-link {
-    margin-top: 1.7em;
-    height: 3.5rem;
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid red;
-    background-color: none;
-  }
+  .social__signup {
+      display: flex;
+      flex-direction: column;
+    }
 
   @media only screen and (max-width: 768px) {
-    .item {
+    
+    .signup__description-block {
+      margin-top: 5.2rem;
+      color: var(--text-primary);
+    }
+
+    .description-block__promotion {
+      margin-top: 2.7rem;
+      letter-spacing: 0.04em;
+      color: var(--text-tertiary);
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .input__container {
+      flex-direction: column;
+    }
+
+    .social__signup {
       display: flex;
       flex-direction: row;
-      width: 100%;
     }
-
-    .collection {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .left {
-      display: flex;
-      flex-direction: column;
-    }
-
   }
 
 </style>

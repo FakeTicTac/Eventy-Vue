@@ -38,6 +38,7 @@ library.add(
     faArrowLeft,
     );
 
+    
 // Create Application With Neccessary Extensions.
 const app = createApp(App)
     .use(router)
