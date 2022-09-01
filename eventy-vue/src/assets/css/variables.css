@@ -5,6 +5,8 @@
     --text-primary: #FFFFFF;
     --text-secondary: #7C7C7C;
     --text-tertiary: #727272;
+    --text-helpers: #E4E4E4;
+    --text-placeholder: #A0A0A0 ;
     --base-gradient: linear-gradient(to right, #F9984D 5%, #F32C31 30%, #983C95);
     
     --base-font-family: 'Alata', sans-serif;

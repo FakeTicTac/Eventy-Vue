@@ -14,16 +14,21 @@
 
       <div class="input__container">
         <div class="input__fields">
-          <input class="field" type="text" />
-          <input class="field" type="text" />
-          <button>Create Your Account</button>
+          <input class="field" type="text" placeholder="Username / Email" />
+          <input class="field" type="text" placeholder="Password" />
+          <span class="already-member-sm">Already a Member?</span>
+          <button class="field input__submit">
+            <span class="text">Create Your Account</span>
+          </button>
         </div>
         <div class="social__signup">
-          <button>Sign up with Google</button>
-          <button>Sign up with Facebook</button>
-          <button>Sign up with Apple Account</button>
+          <button class="field">Sign up with Google</button>
+          <button class="field">Sign up with Facebook</button>
+          <button class="field">Sign up with Apple Account</button>
         </div>
       </div>
+
+      <span style="margin-top: 4rem">Already a Member?</span>
 
     </div>
 
@@ -51,22 +56,24 @@
     background: var(--background-primary);
     color: var(--text-primary);
     font-family: var(--base-font-family);
+    letter-spacing: var(--base-letter-spacing);
   }
 
   .signup__container {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
   }
 
   .signup__description-block {
     display:flex;
     flex-direction: column;
-    margin-top: 4.5rem;
     text-align: center;
-    color: var(--text-primary);
   }
 
   .description-block__action {
-    margin-top: 1.1rem;
     font-size: 36px;
     letter-spacing: 0.11rem;
   }
@@ -80,17 +87,55 @@
   .input__container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .input__fields {
     display: flex;
     flex-direction: column;
+    align-items:center;
   }
 
   .social__signup {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+  }
+
+  .field {
+    width: 20rem;
+    height: 4.3rem;
+    margin-bottom: 0.8rem;
+    background: var(--background-secondary);
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+  }
+
+  ::placeholder {
+    padding-left: 1.5rem;
+    font-size: 17px;
+    letter-spacing: 0.04rem;
+    color: var(--text-placeholder);
+  }
+
+  .already-member-sm {
+    display: none;
+  }
+  
+  .input__submit {
+    background: var(--base-gradient);
+    color: var(--text-primary);
+    text-align: start;
+    font-size: 18px;
+    letter-spacing: var(--base-letter-spacing);
+    outline: none;
+  }
+
+  .input__submit > .text {
+    padding-left: 1.8rem;
+  }
+
 
   @media only screen and (max-width: 768px) {
     
@@ -109,11 +154,42 @@
 
     .input__container {
       flex-direction: column;
+      margin-top: 2.7rem;
+      margin-left: 2.2rem;
+      margin-right: 2.2rem;
     }
 
     .social__signup {
       display: flex;
       flex-direction: row;
+    }
+
+    .field {
+      width: 100%;
+    }
+
+    .already-member-sm {
+      display: block;
+      width: 100%;
+      text-align: end;
+      font-family: var(--base-font-family);
+      letter-spacing: 0.05rem;
+      font-size: 17px;
+      color: var(--text-helpers);
+      font-weight: 400;
+      text-decoration: underline;
+      text-underline-offset: 0.1rem;
+    }
+
+    .input__submit {
+      width: 100%;
+      margin-top: 3rem;
+    }
+  }
+
+  @media (max-height: 740px) and (min-width: 769px) {
+    .signup__description-block {
+
     }
   }
 
