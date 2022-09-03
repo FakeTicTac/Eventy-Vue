@@ -8,7 +8,15 @@ import {
     faHome,
     faRandom,
     faArrowLeft,
+    faArrowRight,
+    faEyeSlash,
 } from '@fortawesome/free-solid-svg-icons';
+
+import { 
+    faGoogle,
+    faFacebookF,
+    faApple,
+} from '@fortawesome/free-brands-svg-icons';
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -36,6 +44,12 @@ library.add(
     faHome,
     faRandom,
     faArrowLeft,
+    faArrowRight,
+    faEyeSlash,
+    
+    faGoogle,
+    faFacebookF,
+    faApple,
     );
 
     

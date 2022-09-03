@@ -1,23 +1,39 @@
 
 <template>
 
-  <div class="login__container">
+  <div class="page__container">
+
     <AuthenticationHeader />
 
-    <div class="login__description">
-      <h1 class="login__description-action">Log in to Your Account</h1>
-      <p class="login__description-promotion">Choose from 130,000 events with new additions<br>published every day</p>
+    <div class="signup__container">
+
+      <div class="signup__description-block">
+        <h1 class="description-block__action">Log in to Your Account</h1>
+        <p class="description-block__promotion">Choose from 130,000 events with new additions<br>published every day</p>
+      </div>
+
+      <div class="input__container">
+        <div class="input__fields">
+          <input class="field" type="text" placeholder="Username / Email" />
+          <input class="field" type="text" placeholder="Password" />
+          <span class="already-member-sm">Already a Member?</span>
+          <button class="field input__submit">
+            <span class="text">Create Your Account</span>
+          </button>
+        </div>
+        <div class="social__signup">
+          <button class="field social__signup-item">Sign up with Google</button>
+          <button class="field social__signup-item">Sign up with Facebook</button>
+          <button class="field social__signup-item">Sign up with Apple Account</button>
+        </div>
+      </div>
+
+      <span style="margin-top: 4rem">Already a Member?</span>
+
     </div>
-    <div class="login__input-field">
-      <input class="input-field" type="text" placeholder="Username / Email"/>
-      <input class="input-field" type="text" placeholder="Password"/>
-    </div>
-    <div class="advanced-option">
-      <p class="option">Forgot password?</p>
-    </div>
-    <div class="login__submit">
-      <button>Log in to Your Account</button>
-    </div>
+
+    <Footer />
+
   </div>
 
 </template>
@@ -34,85 +50,149 @@
 
 <style scoped>
 
-  @import "@/assets/css/variables.css";
-
-
-  .login__container {
+  .page__container {
     height: 100vh;
-    background: var(--primary);
-  }
-
-  .login__description {
-    display:flex;
-    margin: 0 2em 0 2em;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 4.5rem;
-    color: var(--secondary);
-  }
-
-  .login__description-action {
-    font-size: 35px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  .login__description-promotion {
-    margin-top: 1.7rem;
-    font-size: 16px;
-    font-weight: 550;
-    letter-spacing: 0.04em;
-    color: #727272;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  .login__input-field {
     display: flex;
     flex-direction: column;
-    margin: 1em 2em 0 2em;
+    background: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--base-font-family);
+    letter-spacing: var(--base-letter-spacing);
   }
 
-  input::placeholder {
-    color: #A0A0A0;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    padding-left: 1.2rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  .signup__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
   }
 
-  .input-field {
-    margin-top: 0.7em;
-    height: 3.5rem;
-    border-radius: 6px;
+  .signup__description-block {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description-block__action {
+    font-size: 36px;
+    letter-spacing: 0.11rem;
+  }
+
+  .description-block__promotion {
+    margin-top: 0.6rem;
+    font-size: 19px;
+    color: var(--text-tertiary);
+  }
+
+  .input__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .input__fields {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .social__signup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+  }
+
+  .field {
+    width: 20rem;
+    height: 4.3rem;
+    margin-bottom: 0.8rem;
+    background: var(--background-secondary);
+    border-radius: 0.4rem;
     border: none;
-    background-color: #303030;
+    outline: none;
   }
 
-  .login__submit {
-    margin: 3.1em 2em 0 2em;
-  }
-
-  .login__submit > button {
-    height: 3.5rem;
-    width: 100%;
-    border-radius: 6px;
-    background: var(--gradient);
-    color: var(--secondary);
-    padding-left: 1.2rem;
-    text-align: left;
-    font-weight: 500;
+  ::placeholder {
+    padding-left: 1.5rem;
     font-size: 17px;
-    letter-spacing: 0.04em;
-    opacity: 90%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.04rem;
+    color: var(--text-placeholder);
   }
 
-  .advanced-option {
-    color: var(--secondary);
-    margin: 0.6em 2em 0 2em;
-    text-align: right;
-    text-decoration: underline;
+  .already-member-sm {
+    display: none;
+  }
+  
+  .input__submit {
+    background: var(--base-gradient);
+    color: var(--text-primary);
+    text-align: start;
+    font-size: 18px;
+    letter-spacing: var(--base-letter-spacing);
+    outline: none;
+  }
+
+  .input__submit > .text {
+    padding-left: 1.8rem;
+  }
+
+  .social__signup-item {
+    background: none;
+    color: var(--text-primary);
+    border: 5px solid;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    
+    .signup__description-block {
+      color: var(--text-primary);
+    }
+
+    .description-block__promotion {
+      margin-top: 2.7rem;
+      letter-spacing: 0.04em;
+      color: var(--text-tertiary);
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .input__container {
+      flex-direction: column;
+      margin-top: 2.7rem;
+      margin-left: 2.2rem;
+      margin-right: 2.2rem;
+    }
+
+    .social__signup {
+      display: flex;
+      flex-direction: row;
+      margin-left: 0;
+    }
+
+    .field {
+      width: 100%;
+    }
+
+    .already-member-sm {
+      display: block;
+      width: 100%;
+      text-align: end;
+      font-family: var(--base-font-family);
+      letter-spacing: 0.05rem;
+      font-size: 17px;
+      color: var(--text-helpers);
+      font-weight: 400;
+      text-decoration: underline;
+      text-underline-offset: 0.1rem;
+    }
+
+    .input__submit {
+      width: 100%;
+      margin-top: 3rem;
+    }
   }
 
 </style>

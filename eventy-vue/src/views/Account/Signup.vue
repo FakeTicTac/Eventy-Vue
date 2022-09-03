@@ -1,34 +1,51 @@
 
 <template>
 
-  <div class="page__container">
+  <div class="page-container">
 
     <AuthenticationHeader />
 
-    <div class="signup__container">
+    <div class="signup-container">
 
-      <div class="signup__description-block">
-        <h1 class="description-block__action">Sign up For Evently</h1>
-        <p class="description-block__promotion">Choose from 130,000 events with new additions<br>published every day</p>
+      <div class="description-block">
+        <h1 class="action">Sign up For Evently</h1>
+        <p class="promotion">Choose from 130,000 events with new additions<br>published every day</p>
       </div>
 
-      <div class="input__container">
-        <div class="input__fields">
+      <div class="input-block">
+
+        <div class="fields">
           <input class="field" type="text" placeholder="Username / Email" />
           <input class="field" type="text" placeholder="Password" />
           <span class="already-member-sm">Already a Member?</span>
-          <button class="field input__submit">
-            <span class="text">Create Your Account</span>
+          <button class="field submit">
+            <span class="submit-text">Create Your Account</span>
+            <fa icon="arrow-right" class="right-arrow" />
           </button>
         </div>
-        <div class="social__signup">
-          <button class="field">Sign up with Google</button>
-          <button class="field">Sign up with Facebook</button>
-          <button class="field">Sign up with Apple Account</button>
+
+        <div class="strike">
+          <span>or continue with</span>
         </div>
+
+        <div class="social">
+          <button class="field social-item">
+            <fa icon="fa-brands fa-google" class="brand-logo" />
+            <span class="description">Sign up with Google</span>
+          </button>
+          <button class="field social-item">
+            <fa icon="fa-brands fa-facebook-f" class="brand-logo" />
+            <span class="description">Sign up with Facebook</span>
+          </button>
+          <button class="field social-item">
+            <fa icon="fa-brands fa-apple" class="brand-logo" />
+            <span class="description">Sign up with Apple Account</span>
+          </button>
+        </div>
+  
       </div>
 
-      <span style="margin-top: 4rem">Already a Member?</span>
+      <span class="already-member-lg">Already a Member?</span>
 
     </div>
 
@@ -40,6 +57,7 @@
 
 
 <script lang="ts">
+  
   import AuthenticationHeader from "../../components/account/AuthenticationHeader.vue";
 
   export default { components: { AuthenticationHeader } };
@@ -49,8 +67,8 @@
 
 <style scoped>
 
-  .page__container {
-    height: 100vh;
+  .page-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background: var(--background-primary);
@@ -59,7 +77,7 @@
     letter-spacing: var(--base-letter-spacing);
   }
 
-  .signup__container {
+  .signup-container {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -67,42 +85,36 @@
     justify-content: center;
   }
 
-  .signup__description-block {
+  .signup-container > .description-block {
     display:flex;
     flex-direction: column;
     text-align: center;
   }
 
-  .description-block__action {
+  .description-block > .action {
     font-size: 36px;
     letter-spacing: 0.11rem;
   }
 
-  .description-block__promotion {
+  .description-block > .promotion {
     margin-top: 0.6rem;
     font-size: 19px;
     color: var(--text-tertiary);
   }
 
-  .input__container {
+  .signup-container > .input-block {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .input__fields {
+  .input-block > .fields {
     display: flex;
     flex-direction: column;
     align-items:center;
   }
 
-  .social__signup {
-    display: flex;
-    flex-direction: column;
-    margin-left: 8rem;
-  }
-
-  .field {
+  .fields > .field {
     width: 20rem;
     height: 4.3rem;
     margin-bottom: 0.8rem;
@@ -112,18 +124,21 @@
     outline: none;
   }
 
-  ::placeholder {
+  .field::placeholder {
     padding-left: 1.5rem;
     font-size: 17px;
     letter-spacing: 0.04rem;
     color: var(--text-placeholder);
   }
 
-  .already-member-sm {
+  .fields > .already-member-sm {
     display: none;
   }
-  
-  .input__submit {
+
+  .fields > .submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background: var(--base-gradient);
     color: var(--text-primary);
     text-align: start;
@@ -132,64 +147,156 @@
     outline: none;
   }
 
-  .input__submit > .text {
-    padding-left: 1.8rem;
+  .submit > .submit-text {
+    flex-grow: 1;
   }
 
+  .input-block > .social {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+  }
+
+  .social > .social-item {
+    margin: 0 1.2rem 0 1.2rem;
+    background: none;
+    color: var(--text-primary);
+    border: 1px solid;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+  }
+
+  .already-member-lg {
+    display: block;
+  }
+
+  .input-block > .strike {
+    display: none;
+  }
 
   @media only screen and (max-width: 768px) {
     
-    .signup__description-block {
-      margin-top: 5.2rem;
-      color: var(--text-primary);
+    .signup-container {
+      align-items: unset;
+      justify-content: unset;
     }
 
-    .description-block__promotion {
-      margin-top: 2.7rem;
-      letter-spacing: 0.04em;
+    .description-block > .action {
+      margin-top: 4rem;
+      font-size: 28px;
+      letter-spacing: 0.11rem;
+    }
+
+    .description-block > .promotion {
+      margin-top: 1.9rem;
       color: var(--text-tertiary);
-      font-size: 17px;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: nor;
+      letter-spacing: 0.04em;
     }
 
-    .input__container {
+    .signup-container > .input-block {
       flex-direction: column;
-      margin-top: 2.7rem;
-      margin-left: 2.2rem;
-      margin-right: 2.2rem;
-    }
-
-    .social__signup {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .field {
       width: 100%;
     }
 
-    .already-member-sm {
+    .input-block > .fields {
+      margin: 2.4rem 2.2rem 0 2.2rem;
+    }
+
+    .fields > .field {
+      width: 100%;
+      height: 3.4rem;
+    }
+
+    .field::placeholder {
+      padding-left: 1.3rem;
+      color: var(--text-placeholder);
+      font-size: 13px;
+      letter-spacing: 0.04rem;
+    }
+
+    .fields > .already-member-sm {
       display: block;
       width: 100%;
       text-align: end;
-      font-family: var(--base-font-family);
-      letter-spacing: 0.05rem;
-      font-size: 17px;
       color: var(--text-helpers);
-      font-weight: 400;
+      font-family: var(--base-font-family);
+      font-size: 13px;
+      font-weight: lighter;
+      letter-spacing: 0.05rem;
       text-decoration: underline;
-      text-underline-offset: 0.1rem;
     }
 
-    .input__submit {
+    .fields > .submit {
       width: 100%;
-      margin-top: 3rem;
+      margin-top: 2.7rem;
     }
-  }
 
-  @media (max-height: 740px) and (min-width: 769px) {
-    .signup__description-block {
+    .submit > .submit-text {
+      margin-left: 1.3rem;
+      font-size: 14px;
+      font-weight: lighter;
+      letter-spacing: 0.06rem;
+    }
 
+    .submit > .right-arrow {
+      margin-right: 1.3rem;
+    }
+
+    .input-block > .strike {
+      display: block;
+      margin: 2rem 2.8rem 0 2.8rem;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap; 
+    }
+
+    .strike > span {
+      position: relative;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: lighter;
+      color: var(--text-helpers);
+    }
+
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 1px;
+        background: var(--text-helpers);
+    }
+
+    .strike > span:before {
+        right: 100%;
+        margin-right: 1.2rem;
+    }
+
+    .strike > span:after {
+      left: 100%;
+      margin-left: 1.2rem;
+    }
+
+    .input-block > .social {
+      display: flex;
+      flex-direction: row;
+      margin: 2.2rem 0 0 0; 
+      justify-content: center;
+    }
+
+    .social-item > .description {
+      display: none;
+    }
+
+    .social-item > .brand-logo {
+      padding: 0.6rem;
+      font-size: 25px;
+    }
+
+    .already-member-lg {
+      display: none;
     }
   }
 

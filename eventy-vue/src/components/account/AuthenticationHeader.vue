@@ -3,8 +3,8 @@
     
   <div class="header">
 
-    <div class="header_back">
-      <fa icon="arrow-left" class="header_icon back-icon" />
+    <div class="header-back">
+      <fa icon="arrow-left" class="header-icon back-icon" />
     </div>
 
   </div>
@@ -36,18 +36,18 @@
     background-color: var(--background-primary);
 }
 
-.header_back {
+.header-back {
     display: none;
 }
 
-.header_icon {
+.header-icon {
     font-size: 2em;
     color: var(--text-primary);
     cursor: pointer;
 }
 
 @media (max-width: 767px) {
-    .header_back {
+    .header-back {
         display: flex;
         align-items: center;
     }

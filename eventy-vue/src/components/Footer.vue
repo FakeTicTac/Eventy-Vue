@@ -1,12 +1,12 @@
 
 <template>
 
-  <div class="footer__container">
-    <div class="footer__menu-items">
+  <div class="footer-container">
+    <div class="menu-items">
       <span>Privacy Policy</span>
-      <hr class="footer__menu-delimiter" />
+      <hr class="delimiter" />
     </div>
-    <div class="footer__copyright">
+    <div class="copyright">
       <span>2022 Evently. All rights reserved</span>
     </div>
   </div>
@@ -25,7 +25,7 @@
 
   @import "@/assets/css/variables.css";
 
-  .footer__container {
+  .footer-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,55 +36,53 @@
     letter-spacing: var(--base-letter-spacing);
   }
 
-  .footer__menu-delimiter {
+  .delimiter {
     display: none;
   }
 
+  @media (min-width: 768px) {
 
-  @media(min-width: 768px) {
-    .footer__copyright {
-      font-weight: 550;
+    .menu-items {
+      height: 5.5rem;
+      font-weight: normal;
+      width: 50%;
+      padding-top: 2rem;
+      padding-left: 10rem;
+    }
+
+    .copyright {
+      font-weight: normal;
       width: 50%;
       text-align: right;
       padding-top: 2rem;
       padding-right: 10rem;
     }
-
-    .footer__menu-items {
-      height: 5.5rem;
-      font-weight: 550;
-      width: 50%;
-      padding-top: 2rem;
-      padding-left: 10rem;
-    }
   }
 
   @media (max-width: 767px) {
   
-    .footer__container {
+    .footer-container {
       flex-direction: column;
-      height: 8.5rem;
+      margin-top: 2rem;
+      font-size: 13px;
       text-align: center;
     }
 
-    .footer__menu-items {
-      height: 50%;
+    .menu-items {
       padding-top: 1rem;
       text-decoration: underline;
       text-underline-offset: 0.1rem;
-      font-weight: 550;
+      font-weight: normal;
     }
 
-    .footer__menu-delimiter {
+    .delimiter {
       display: flex;
     }
 
-    .footer__copyright {
-      height: 100%;
-      padding-top: 0.3rem;
-      font-weight: 550;
+    .copyright {
+      font-weight: normal;
+      margin-bottom: 1.3rem;
     }
   }
-
 
 </style>
